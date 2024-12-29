@@ -308,7 +308,7 @@ class VCP(BrightnessMethod):
         return info
 
     @classmethod
-    def get_brightness(cls, display: Optional[int] = None, max_tries: int = 50) -> List[IntPercentage]:
+    def get_brightness(cls, display: Optional[int] = None, max_tries: int = 5) -> List[IntPercentage]:
         '''
         Args:
             display: the index of the specific display to query.
@@ -351,7 +351,7 @@ class VCP(BrightnessMethod):
         return values
 
     @classmethod
-    def set_brightness(cls, value: IntPercentage, display: Optional[int] = None, max_tries: int = 50):
+    def set_brightness(cls, value: IntPercentage, display: Optional[int] = None, max_tries: int = 5):
         '''
         Args:
             value: percentage brightness to set the display to
